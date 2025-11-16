@@ -104,7 +104,7 @@
       <!-- Buttons -->
       <div class="about-buttons">
         <a href="#contact" class="btn-about">Contact Me</a>
-        <a href="https://drive.google.com/file/d/1FukTqX9ub0roSy0uPfYFMzjfLDLtWe2h/view?usp=sharing" target="_blank" class="btn-resume">Download Resume</a>
+        <a href="https://drive.google.com/file/d/1N_6cFiAOvUW5YCFejzuUS5GyaFPjQ5hp/view?usp=drive_link" target="_blank" class="btn-resume">Download Resume</a>
       </div>
     </div>
 
@@ -441,7 +441,7 @@
 </div>
 
 
-    <!-- WordPress -->
+    <!-- Front-End Development -->
  <div class="service__card">
   <i class="ri-wordpress-line"></i>
   <h3>Front-End Development</h3>
@@ -453,100 +453,144 @@
 
 
 <section class="projects" id="projects">
+
   <h2>Projects</h2>
+
+  <!-- Filter Buttons -->
+  <div class="project-filters">
+    <button class="filter-btn active" data-category="all">All Projects</button>
+    <button class="filter-btn" data-category="fullstack">Full Stack</button>
+    <button class="filter-btn" data-category="react">React</button>
+    <button class="filter-btn" data-category="frontend">Frontend</button>
+  </div>
+
+  <!-- PROJECTS START -->
   <div class="project-cards">
 
-    <div class="project-card">
-      <img src="img/foody.png" alt="Coffee House">
-      <h3>FoodyFly </h3>
-      <p>A modern web application for exploring and managing food-related content.
-</p>
+    <!-- ===== FULL STACK  ===== -->
+       <div class="project-card" data-category="fullstack">
+      <img src="img/DailyBasket.png" alt="">
+      <h3>DailyBasket</h3>
+      <p> DailyBasket is a simple and user-friendly online grocery platform designed to make everyday shopping easier and faster.</p>
+      <a href="https://dailybasket0.netlify.app/">View</a>
+    </div>
+    <div class="project-card" data-category="fullstack">
+      <img src="img/foody.png" alt="">
+      <h3>FoodyFly</h3>
+      <p>A modern web application for exploring and managing food-related content.</p>
       <a href="https://foodyfly0.netlify.app/">View</a>
     </div>
 
-    <div class="project-card">
-      <img src="img/green.png" alt="Fruit Brust">
+    <div class="project-card" data-category="fullstack">
+      <img src="img/green.png" alt="">
       <h3>Green-Nest</h3>
-      <p>A responsive and visually appealing indoor plants website featuring intuitive navigation and a clean, nature-inspired design.</p>
-
+      <p>A responsive indoor plants website featuring clean UI.</p>
       <a href="https://green-nest-e2vy.vercel.app/">View</a>
     </div>
-     <div class="project-card">
-      <img src="img/sky.png" alt="Coffee House">
+
+    <div class="project-card" data-category="fullstack">
+      <img src="img/sky.png" alt="">
       <h3>Skypules</h3>
-      <p>Skypules – A responsive weather web application featuring real-time forecasts, dynamic light/dark themes, interactive dashboards, and secure user authentication for an engaging user experience </p>
+      <p>Weather app with real-time forecast and theme switch.</p>
       <a href="https://skypules.netlify.app/">View</a>
     </div>
-    
-  
-  </div>
-   <div class="project-cards">
 
-    <div class="project-card">
-      <img src="img/Screenshot 2025-09-29 202519.png" alt="Coffee House">
+
+    <!-- ===== REACT  ===== -->
+    <div class="project-card" data-category="react">
+      <img src="img/Screenshot 2025-09-29 202519.png" alt="">
       <h3>QuickMart</h3>
-      <p>Fresh, healthy, and 100% organic fruits and vegetables delivered straight from local farms to your doorstep. Enjoy the taste of nature’s best, grown with care and full of nutrients, right in your city</p>
+      <p>Fresh organic grocery delivered to your home.</p>
       <a href="https://q-quickmart.netlify.app/">View</a>
     </div>
 
-    <div class="project-card">
-      <img src="img/blog.png" alt="Fruit Brust">
+    <div class="project-card" data-category="react">
+      <img src="img/blog.png" alt="">
       <h3>Knowledge Cafe</h3>
-      <p>Structuring a React app, Using useState for dynamic features,Handling events & updating the UI, Creating a clean, responsive design </p>
+      <p>React blog project using state updates and clean UI.</p>
       <a href="https://myblogs-rosy.vercel.app/">View</a>
     </div>
-     <div class="project-card">
-      <img src="img/tictac.png" alt="Coffee House">
+
+    <div class="project-card" data-category="react">
+      <img src="img/tictac.png" alt="">
       <h3>Tic Tac Toe</h3>
-      <p>Built a responsive Tic-Tac-Toe in React — two-player with custom names, X/O icons, winner detection + celebration, and a reset button. </p>
+      <p>Two-player React game with winner detection.</p>
       <a href="https://tic-tac-toe3891.netlify.app/">View</a>
     </div>
-    
-  
-  </div>
-  <div class="project-cards">
 
-    <div class="project-card">
-      <img src="img/TripTuki.png" alt="Coffee House">
-      <h3>🌍 TripTuki ✈️</h3>
-      <p>TripTuki 🌍✈️ is a modern and fully responsive Travel & Hotel Booking Website. </p>
+
+    <!-- ===== FRONTEND (remaining) ===== -->
+    <div class="project-card" data-category="frontend">
+      <img src="img/TripTuki.png" alt="">
+      <h3>TripTuki</h3>
+      <p>Responsive travel & hotel booking website.</p>
       <a href="https://lnkd.in/dZGMYDAT">View</a>
     </div>
 
-    <div class="project-card">
-      <img src="img/MediCareHub.png" alt="Fruit Brust">
-      <h3>💉 MediCare Hub 🩺</h3>
-      <p>The layout is straightforward: Home, About, Services, Departments, Doctors, Contact, Appointment. </p>
+    <div class="project-card" data-category="frontend">
+      <img src="img/MediCareHub.png" alt="">
+      <h3>MediCare Hub</h3>
+      <p>Modern healthcare service website.</p>
       <a href="https://bosrin.github.io/-MediCare-Hub-/">View</a>
     </div>
-     <div class="project-card">
-      <img src="img/PhotoNest_.png" alt="Coffee House">
+
+    <div class="project-card" data-category="frontend">
+      <img src="img/PhotoNest_.png" alt="">
       <h3>PhotoNest</h3>
-      <p>Features a “Gallery” section where multiple images are displayed in a grid: looks like thumbnails of different gallery images. </p>
+      <p>Beautiful image gallery website.</p>
       <a href="https://bosrin.github.io/PhotoNest/">View</a>
     </div>
-     <div class="project-card">
-      <img src="img/Payooo – Digital Wallet.png" alt="Coffee House">
+
+    <div class="project-card" data-category="frontend">
+      <img src="img/Payooo – Digital Wallet.png" alt="">
       <h3>Payooo-Mobile-Bank</h3>
-      <p>Payooo is a simple and secure digital wallet application that allows users to manage money digitally. </p>
+      <p>Simple and secure digital wallet UI.</p>
       <a href="https://bosrin.github.io/Payooo-Mobile-Bank/">View</a>
     </div>
-     <div class="project-card">
-      <img src="img/Frutopia.png" alt="Coffee House">
+
+    <div class="project-card" data-category="frontend">
+      <img src="img/Frutopia.png" alt="">
       <h3>Frutopia</h3>
-      <p>Foodi is a sleek and visually engaging single-page website designed for a modern dining experience. </p>
+      <p>Modern fruit website design.</p>
       <a href="https://bosrin.github.io/Frutopia/">View</a>
     </div>
 
-    <div class="project-card">
-      <img src="img/Restaurant-Website.png" alt="Tea House">
-      <h3>☕Coffee Haven☕</h3>
-      <p>A sleek and responsive Restaurant Website crafted to deliver an engaging user experience. </p>
+    <div class="project-card" data-category="frontend">
+      <img src="img/Restaurant-Website.png" alt="">
+      <h3>Coffee Haven</h3>
+      <p>Responsive restaurant landing page.</p>
       <a href=" https://lnkd.in/dvSq7vfb">View</a>
     </div>
-  
+
   </div>
 </section>
+<!-- js start  -->
+ <script>
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".project-card");
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+      document.querySelector(".filter-btn.active").classList.remove("active");
+      btn.classList.add("active");
+
+      const category = btn.dataset.category;
+
+      cards.forEach(card => {
+        card.style.display =
+          category === "all" || card.dataset.category === category
+            ? "block"
+            : "none";
+      });
+    });
+  });
+</script>
+
+ <!-- js end -->
+
+
+  <!-- contact -->
 
 <section class="contact" id="contact">
   <div class="contact-container">

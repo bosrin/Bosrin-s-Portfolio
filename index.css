@@ -5,10 +5,12 @@
       font-family: "Poppins", sans-serif;
     }
 
-    body {
-      background: #ffffff;
-      color: #222;
-    }
+   body {
+  background: linear-gradient(135deg, #0a192f, #0f2027);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
 
 
 /* Navbar */
@@ -183,8 +185,6 @@
   font-size: 16px;
   color: #fff;
 }
-
-
 
 
 /* ================== Responsive Design ================== */
@@ -398,7 +398,7 @@
 
 /* Skills Section Background */
 .skills.section {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #0a192f, #0f2027);
   padding: 4rem 2rem;
   border-radius: 20px;
   color: #fff;
@@ -522,7 +522,7 @@
 /* Qualification Section */
 .qualification {
   padding: 60px 0;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+   background: linear-gradient(135deg, #0a192f, #0f2027);
   color: #fff;
   text-align: center;
 }
@@ -711,8 +711,34 @@
 }
 
 /* Projects Section */
+.project-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 35px;   
+  justify-content: center;
+  flex-wrap: wrap; /* mobile/tablet এ লাইন ব্রেক সুন্দর হবে */
+}
+
+.filter-btn {
+  padding: 10px 18px;
+  background: #121826;
+  border: 1px solid #233044;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #6c63ff;
+  border-color: #6c63ff;
+  color: #fff;
+}
+
 .projects {
-  background: linear-gradient(135deg, #0f172a, #1e293b); /* same as About bg */
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   padding: 80px 10%;
   color: #fff;
   text-align: center;
@@ -734,11 +760,11 @@
 
 /* Each Project Card */
 .project-card {
-  background: rgba(255, 255, 255, 0.05); /* transparent glassy */
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 15px;
   padding: 25px;
-  box-shadow: 0 0 25px rgba(99,102,241,0.3); /* purple glow */
+  box-shadow: 0 0 25px rgba(99,102,241,0.3);
   transition: 0.4s;
   text-align: left;
 }
@@ -748,27 +774,19 @@
   box-shadow: 0 0 40px rgba(56,189,248,0.6), 0 0 60px rgba(147,51,234,0.4);
 }
 
-/* Project Image */
-/* .project-card img {
+.project-card img {
   width: 100%;
-  border-radius: 12px;
-  margin-bottom: 15px;
-} */
- .project-card img {
-  width: 100%;
-  height: 200px;   /* সব ছবির জন্য same height */
-  object-fit: cover;  /* image proportion maintain করে crop করবে */
-  border-radius: 8px; /* চাইলে corner সুন্দর হবে */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-/* Project Title */
 .project-card h3 {
   font-size: 22px;
   margin-bottom: 10px;
-  color: #38bdf8; /* cyan highlight */
+  color: #38bdf8;
 }
 
-/* Project Description */
 .project-card p {
   font-size: 15px;
   color: #d1d5db;
@@ -776,7 +794,6 @@
   margin-bottom: 15px;
 }
 
-/* View Button */
 .project-card a {
   display: inline-block;
   padding: 8px 18px;
@@ -793,12 +810,22 @@
   box-shadow: 0 0 15px rgba(56,189,248,0.6);
 }
 
-/* 📱 Responsive Design */
-
-/* Tablet */
+/* -------------------------- */
+/* 📱 Tablet Responsive */
+/* -------------------------- */
 @media (max-width: 992px) {
   .projects {
-    padding: 60px 5%;
+    padding: 60px 6%;
+  }
+
+  .project-filters {
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .filter-btn {
+    padding: 9px 16px;
+    font-size: 14px;
   }
 
   .projects h2 {
@@ -819,10 +846,22 @@
   }
 }
 
-/* Mobile */
+/* -------------------------- */
+/* 📱 Mobile Responsive */
+/* -------------------------- */
 @media (max-width: 600px) {
   .projects {
     padding: 50px 20px;
+  }
+
+  .project-filters {
+    gap: 8px;
+    margin-bottom: 25px;
+  }
+
+  .filter-btn {
+    padding: 8px 14px;
+    font-size: 13px;
   }
 
   .projects h2 {
@@ -831,7 +870,8 @@
   }
 
   .project-cards {
-    grid-template-columns: 1fr; /* এক কলামে আসবে */
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
 
   .project-card {
@@ -848,7 +888,7 @@
 
   .project-card a {
     padding: 6px 14px;
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
