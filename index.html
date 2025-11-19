@@ -565,7 +565,7 @@
   </div>
 </section>
 <!-- js start  -->
- <script>
+<script>
   const filterButtons = document.querySelectorAll(".filter-btn");
   const cards = document.querySelectorAll(".project-card");
 
@@ -578,14 +578,16 @@
       const category = btn.dataset.category;
 
       cards.forEach(card => {
-        card.style.display =
-          category === "all" || card.dataset.category === category
-            ? "block"
-            : "none";
+        if (category === "all" || card.dataset.category === category) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
       });
     });
   });
 </script>
+
 
  <!-- js end -->
 
@@ -604,25 +606,46 @@
       <p>
         I need your <b>Name</b> and <b>Email Address</b>, but you won't receive anything other than your reply.
       </p>
+
+      <!-- Contact Details -->
+      <!-- Contact Details -->
+<div class="contact-links">
+
+  <h3 class="contact-links-title">Get in Touch</h3>
+
+  <p><strong>Email:</strong> 
+    <a href="mailto:rabeya15-3891@diu.edu.bd">
+      rabeya15-3891@diu.edu.bd
+    </a>
+  </p>
+
+  <p><strong>LinkedIn:</strong>
+    <a href="https://www.linkedin.com/in/bosrin-rabeya-906781335/" target="_blank">
+      Contact me on LinkedIn
+    </a>
+  </p>
+
+</div>
+
     </div>
 
     <!-- Right Form -->
     <div class="contact-form">
       <h3>Send me a message</h3>
       <form id="contact-form">
-  <input type="text" name="name" placeholder="Name" required />
-  <input type="email" name="email" placeholder="Email Address" required />
-  <input type="text" name="subject" placeholder="Subject" required />
-  <textarea name="message" placeholder="Message" required></textarea>
-  <button type="submit" class="btn">Send Message</button>
-</form>
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="text" name="subject" placeholder="Subject" required />
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
 
-<p id="status"></p>
-
-
+      <p id="status"></p>
     </div>
+
   </div>
 </section>
+
 
 <footer>
   <div class="footer-links">
@@ -684,34 +707,31 @@ skillsHeader.forEach((el) => {
 
 
 <!-- contact js -->
-
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 <script>
-  (function() {
-    emailjs.init("I0VPCjqfO3-X0I53Y"); // এখানে EmailJS এর public key বসান
-  })();
-</script>
-
-<!-- EmailJS Library -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("I0VPCjqfO3-x0I53Y"); // আপনার EmailJS Public Key
-  })();
+  emailjs.init("I0VPCjqfO3-X0I53Y");
 
   document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
     emailjs.sendForm("service_j2bihp8", "template_j9groq6", this)
-      .then(function(response) {
+      .then(() => {
         document.getElementById("status").innerText = "✅ Message Sent Successfully!";
         document.getElementById("status").style.color = "limegreen";
-      }, function(error) {
+      })
+      .catch((error) => {
+        console.log("ERROR DETAILS:", error);    
+        alert(JSON.stringify(error));           
+
         document.getElementById("status").innerText = "❌ Failed to send. Try again!";
         document.getElementById("status").style.color = "red";
       });
   });
 </script>
+
+
+
+
 
 
 
